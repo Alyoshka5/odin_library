@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <!-- BOOKS LIBRARY -->
+    <h1>Books</h1>
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Pages</th>
+            <th>Read</th>
+            <th>Change status</th>
+            <th>Delete</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- NEW BOOK FORM -->
+    <button id="new-book-button">NEW BOOK</button>
+    <form class="book-form hidden">
+        <div>
+            <label for="book-title">Title</label><br>
+            <input type="text" name="book-title" class="book-input" required="true">
+        </div>
+        <div>
+            <label for="book-author">Author</label><br>
+            <input type="text" name="book-author" class="book-input">
+        </div>
+        <div>
+            <label for="book-pages">Number Of Pages</label><br>
+            <input type="text" name="book-pages" class="book-input">
+        </div>
+        <div>
+            <label for="book-pages">Read</label>
+            <!-- <input type="checkbox" name="book-read" class="readCheckbox book-input"> -->
+            <select name="book-read" class="book-input">
+                <option value="">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        <input type="submit">
+    </form>
+    
+<script src="script.js"></script>
+</body>
+</html>
