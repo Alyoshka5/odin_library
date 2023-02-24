@@ -1,3 +1,5 @@
+import checkFormValidity from './form_validation.js';
+
 let myLibrary = [];
 
 // FILL TABLE
@@ -67,8 +69,7 @@ const bookButton = document.querySelector('#new-book-button');
 const bookForm = document.querySelector('.book-form');
 const bookInputs = document.querySelectorAll('.book-input');
 
-function getBookInfo(e) {
-    e.preventDefault();
+function getBookInfo() {
     let info = [];
     bookInputs.forEach(input => {
         info.push(input.value);
@@ -82,7 +83,13 @@ bookButton.addEventListener('click', () => {
     bookForm.classList.toggle('hidden');
 
 });
-bookForm.addEventListener('submit', getBookInfo);
+bookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    checkFormValidity();
+    if (bookForm.checkValidity()) {
+        getBookInfo();
+    }
+});
 
 
 // DELETE BOOK

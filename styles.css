@@ -11,3 +11,7 @@ table {
 .hidden {
     display: none;
 }
+
+.error-div {
+    color: red;
+}

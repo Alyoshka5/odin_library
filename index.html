@@ -24,22 +24,24 @@
 
     <!-- NEW BOOK FORM -->
     <button id="new-book-button">NEW BOOK</button>
-    <form class="book-form hidden">
+    <form class="book-form hidden" novalidate>
         <div>
             <label for="book-title">Title</label><br>
-            <input type="text" name="book-title" class="book-input" required="true">
+            <input type="text" name="book-title" class="book-input" required>
+            <div class="book-title-error error-div"></div>
         </div>
         <div>
             <label for="book-author">Author</label><br>
-            <input type="text" name="book-author" class="book-input">
+            <input type="text" name="book-author" class="book-input" required>
+            <div class="book-author-error error-div"></div>
         </div>
         <div>
             <label for="book-pages">Number Of Pages</label><br>
-            <input type="text" name="book-pages" class="book-input">
+            <input type="text" name="book-pages" class="book-input" required>
+            <div class="book-pages-error error-div"></div>
         </div>
         <div>
             <label for="book-pages">Read</label>
-            <!-- <input type="checkbox" name="book-read" class="readCheckbox book-input"> -->
             <select name="book-read" class="book-input">
                 <option value="">No</option>
                 <option value="yes">Yes</option>
@@ -48,6 +50,7 @@
         <input type="submit">
     </form>
     
-<script src="script.js"></script>
+<script src="script.js" type="module"></script>
+<script src="form_validation.js" type="module"></script>
 </body>
 </html>
